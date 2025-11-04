@@ -1,0 +1,138 @@
+:root {
+    --lime: #CBFE1C;
+    --dark-bg: #0B0E13;
+}
+
+body {
+    font-family: "Chakra Petch", sans-serif;
+}
+
+.my-nav {
+    background-color: var(--dark-bg) !important;
+    font-family: "Chakra Petch", sans-serif;
+    border-bottom: 1px solid #1d1f23;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+
+.text-lime {
+    color: var(--lime) !important;
+}
+
+.btn-lime {
+    background-color: var(--lime);
+    color: #0B0E13;
+    font-weight: 700;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-lime::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            rgba(255, 255, 255, 0.2) 0%,
+            rgba(255, 255, 255, 0.6) 50%,
+            rgba(255, 255, 255, 0.2) 100%);
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+
+.btn-lime:hover::before {
+    left: 125%;
+}
+
+.btn-lime:hover {
+    background-color: #A4CE1A;
+}
+
+.nav-link {
+    color: #f1f1f1 !important;
+    margin: 0 10px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--lime) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--lime) !important;
+}
+
+.icon {
+    color: #fff;
+    font-weight: 200 !important;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.icon:hover {
+    color: var(--lime);
+}
+
+
+
+
+.mobile-menu hr {
+    border: 3px solid #222;
+}
+
+
+.mobile-menu .btn-outline-light {
+    background: transparent;
+    border: none;
+    color: #f1f1f1;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.mobile-menu .btn-outline-light:hover {
+    color: #CBFE1C;
+}
+
+.mobile-menu .btn-lime {
+    background-color: #CBFE1C;
+    color: #0B0E13;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-menu .btn-lime:hover {
+    background-color: #A4CE1A;
+}
+
+
+.navbar-toggler {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0.4rem 0.6rem;
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        padding: 0.8rem 0;
+    }
+
+    .navbar-nav .nav-item {
+        margin-block: 8px;
+    }
+
+    .navbar-nav .nav-link {
+        display: block;
+        padding: 0.8rem 0;
+        text-align: left;
+        font-size: 1rem;
+    }
+}
