@@ -3,17 +3,16 @@
     --dark-bg: #0B0E13;
 }
 
-body {
+* {
     font-family: "Chakra Petch", sans-serif;
 }
 
 .my-nav {
     background-color: var(--dark-bg) !important;
     font-family: "Chakra Petch", sans-serif;
-    border-bottom: 1px solid #1d1f23;
+    border-bottom: 2px solid #1d1f23;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 }
-
 
 .text-lime {
     color: var(--lime) !important;
@@ -21,14 +20,13 @@ body {
 
 .btn-lime {
     background-color: var(--lime);
-    color: #0B0E13;
-    font-weight: 700;
+    color: #0B0E13 !important;
+    font-weight: 700 !important;
     border-radius: 8px;
     position: relative;
     overflow: hidden;
     z-index: 1;
     transition: background-color 0.3s ease;
-    cursor: pointer;
 }
 
 .btn-lime::before {
@@ -38,7 +36,7 @@ body {
     left: -75%;
     width: 50%;
     height: 100%;
-    background: linear-gradient(120deg,
+    background: linear-gradient(90deg,
             rgba(255, 255, 255, 0.2) 0%,
             rgba(255, 255, 255, 0.6) 50%,
             rgba(255, 255, 255, 0.2) 100%);
@@ -54,10 +52,29 @@ body {
     background-color: #A4CE1A;
 }
 
+.navbar-brand{
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--lime);
+    text-shadow: none !important;
+    transform: none !important;
+    animation: none !important;
+    cursor: default !important;
+}
+
+.navbar-brand:hover{
+    color: var(--lime);
+}
+
+.game-icon{
+    font-size: 20px;
+}
+
 .nav-link {
     color: #f1f1f1 !important;
-    margin: 0 10px;
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 0 8px;
     transition: 0.3s ease;
 }
 
@@ -81,13 +98,9 @@ body {
     color: var(--lime);
 }
 
-
-
-
 .mobile-menu hr {
     border: 3px solid #222;
 }
-
 
 .mobile-menu .btn-outline-light {
     background: transparent;
@@ -113,12 +126,68 @@ body {
     background-color: #A4CE1A;
 }
 
-
 .navbar-toggler {
     border: none !important;
     box-shadow: none !important;
     padding: 0.4rem 0.6rem;
 }
+
+#ultimate-design {
+    padding-top: 150px;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.88)),
+        url(../images/hero-bg.jpg) center/cover no-repeat fixed;
+}
+
+#ultimate-design .hero-title {
+    font-family: "Days One", sans-serif;
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+#ultimate-design p{
+    color: oklch(0.872 0.01 258.338);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+#ultimate-design .hero-title span {
+    color: var(--lime);
+}
+
+.border-lime {
+    border: 3px solid var(--lime);
+}
+
+.btn-outline-lime {
+    border: 2px solid var(--lime);
+    color: var(--lime);
+    background: transparent;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.btn-outline-lime:hover {
+    background-color: var(--lime);
+    color: #0B0E13;
+}
+
+.players-badge {
+    font-size: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.players-badge .fa-trophy {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 991px) {
+    #ultimate-design .hero-title {
+        font-size: 45px;
+    }
+}
+
 
 @media (max-width: 991px) {
     .navbar-nav {
@@ -135,4 +204,4 @@ body {
         text-align: left;
         font-size: 1rem;
     }
-}
+} 
