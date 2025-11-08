@@ -1,24 +1,34 @@
+/* ==================== CSS VARIABLES ==================== */
 :root {
     --lime: #CBFE1C;
     --dark-bg: #0B0E13;
+    --card-bg: #1A1A1A;
+    --icon-box-bg: #1E2939;
+    --border-dark: #1d1f23;
     --gap: 1.5rem;
     --container-padding: 2rem;
 }
 
+/* ==================== GLOBAL STYLES ==================== */
 * {
     font-family: "Chakra Petch", sans-serif;
     box-sizing: border-box;
 }
 
-/* ==================== NAVBAR ==================== */
+
+/* ==================== NAVIGATION BAR ==================== */
 .my-nav {
     background-color: var(--dark-bg) !important;
-    border-bottom: 2px solid #1d1f23;
+    border-bottom: 2px solid var(--border-dark);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 }
 
-.text-lime { color: var(--lime) !important; }
+/* Lime color utility class */
+.text-lime {
+    color: var(--lime) !important;
+}
 
+/* Brand logo styling */
 .navbar-brand {
     font-size: 1.25rem;
     font-weight: 700;
@@ -26,8 +36,11 @@
     cursor: default;
 }
 
-.game-icon { font-size: 20px; }
+.game-icon {
+    font-size: 20px;
+}
 
+/* Navigation links */
 .nav-link {
     color: #f1f1f1 !important;
     font-weight: 400;
@@ -36,11 +49,13 @@
     transition: color 0.3s ease;
 }
 
+/* Active and hover states for nav links */
 .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
     color: var(--lime) !important;
 }
 
+/* Notification and message icons */
 .icon {
     color: #fff;
     font-size: 1rem;
@@ -48,9 +63,12 @@
     transition: color 0.3s;
 }
 
-.icon:hover { color: var(--lime); }
+.icon:hover {
+    color: var(--lime);
+}
 
-/* Buttons */
+/* ==================== BUTTONS ==================== */
+/* Primary lime button with shine effect */
 .btn-lime {
     background-color: var(--lime);
     color: #0B0E13 !important;
@@ -62,19 +80,28 @@
     transition: background-color 0.3s ease;
 }
 
+/* Shine animation effect on hover */
 .btn-lime::before {
     content: "";
     position: absolute;
-    top: 0; left: -75%;
-    width: 50%; height: 100%;
-    background: linear-gradient(90deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0.2) 100%);
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.2) 100%);
     transition: left 0.5s ease;
     z-index: 2;
 }
 
-.btn-lime:hover::before { left: 125%; }
-.btn-lime:hover { background-color: #A4CE1A; }
+.btn-lime:hover::before {
+    left: 125%;
+}
 
+.btn-lime:hover {
+    background-color: #A4CE1A;
+}
+
+/* Dark variant button with lime border */
 .btn-dark {
     background-color: #000 !important;
     color: var(--lime) !important;
@@ -87,21 +114,30 @@
     color: #000 !important;
 }
 
+/* Remove default styling from navbar toggler */
 .navbar-toggler {
     border: none !important;
     box-shadow: none !important;
     padding: 0.4rem 0.6rem;
 }
 
-/* Mobile Menu */
-.mobile-menu hr { border: 2px solid #222; margin: 1rem 0; }
+/* ==================== MOBILE MENU ==================== */
+.mobile-menu hr {
+    border: 2px solid #222;
+    margin: 1rem 0;
+}
+
 .mobile-menu .btn-outline-light {
     border: none;
     color: #f1f1f1;
     font-weight: 500;
     transition: color 0.3s;
 }
-.mobile-menu .btn-outline-light:hover { color: var(--lime); }
+
+.mobile-menu .btn-outline-light:hover {
+    color: var(--lime);
+}
+
 .mobile-menu .btn-lime {
     background-color: var(--lime);
     color: #0B0E13;
@@ -111,7 +147,7 @@
 
 /* ==================== HERO SECTION ==================== */
 #home {
-    background: linear-gradient(rgba(0,0,0,0.87), rgba(0,0,0,0.87)), url(../images/hero-bg.jpg) center/cover fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.87), rgba(0, 0, 0, 0.87)), url(../images/hero-bg.jpg) center/cover fixed;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -120,6 +156,7 @@
     padding-right: var(--container-padding);
 }
 
+/* Hero heading typography */
 .header-caption h1 {
     font-family: "Days One", sans-serif !important;
     font-size: 3.75rem !important;
@@ -129,6 +166,7 @@
     line-height: 1.2;
 }
 
+/* Hero description text */
 .header-caption p {
     font-size: 1rem !important;
     font-weight: 400 !important;
@@ -137,11 +175,13 @@
     margin-bottom: 2rem;
 }
 
+/* Highlighted text in lime color */
 .header-caption span {
     font-family: "Days One", sans-serif !important;
     color: var(--lime);
 }
 
+/* Button container layout */
 .btn-style {
     display: flex;
     gap: 1rem;
@@ -153,6 +193,7 @@
     min-width: 180px;
 }
 
+/* Hero image container with gradient border */
 .header-img {
     padding-left: 2rem;
 }
@@ -173,45 +214,448 @@
     background: url('../images/hero-img.png') center/cover no-repeat;
 }
 
+/* Statistics badge overlay */
 .hero-badge {
     position: absolute;
-    bottom: -20px;
-    left: -3%;
+    bottom: -5%;
+    left: -5%;
     background: var(--dark-bg);
     color: white;
     padding: 1.25rem 1.25rem;
     border: 3px solid #202733;
     border-radius: 5px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
     display: flex;
     align-items: center;
     gap: 0.75rem;
     z-index: 2;
 }
 
-.badge-icon { font-size: 1.125rem; color: var(--lime); }
-.caption-title { margin: 0; font-size: 0.75rem; color: #aaa; }
-.caption-number { margin: 0; font-size: 1.25rem !important; font-weight: 700 !important; color: #fff !important; }
+.badge-icon {
+    font-size: 1.125rem;
+    color: var(--lime);
+}
 
-/* RESPONSIVE */
+.caption-title {
+    margin: 0;
+    font-size: 0.75rem;
+    color: #aaa;
+}
+
+.caption-number {
+    margin: 0;
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    color: #fff !important;
+}
+
+/* ==================== MAIN CONTENT AREA ==================== */
+main {
+    background-color: var(--dark-bg);
+}
+
+/* ==================== OUR GAMES SECTION ==================== */
+#our-games {
+    background-color: #0B0E13;
+    padding: 100px 0;
+}
+
+/* Section label styling with decorative lines */
+main p {
+    font-weight: 700;
+    letter-spacing: 3px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Decorative gradient lines before and after section labels */
+main p::before,
+main p::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to left, rgba(203, 254, 28, 1), rgba(203, 254, 28, 0.5), rgba(203, 254, 28, 0));
+}
+
+main p::before {
+    left: -80px;
+}
+
+main p::after {
+    right: -80px;
+    background: linear-gradient(to right, rgba(203, 254, 28, 1), rgba(203, 254, 28, 0.5), rgba(203, 254, 28, 0));
+}
+
+/* Section headings */
+main h2 {
+    font-family: "Days One", sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+/* Game carousel images */
+#our-games .owl-carousel .item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* View all games button */
+#our-games .btn-view {
+    font-size: 1.125rem;
+    font-weight: 700;
+    padding-block: 16px;
+    padding-inline: 32px;
+}
+
+/* ==================== CAROUSEL CONTROLS ==================== */
+.controls-wrapper {
+    margin-top: 30px;
+}
+
+/* Arrow navigation buttons */
+.arrow-btn {
+    background: transparent;
+    border: 3px solid oklch(0.373 0.034 259.733);
+    color: oklch(70.7% .022 261.325);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 40px;
+    transition: all 0.3s ease;
+}
+
+.arrow-btn:hover {
+    border-color: var(--lime);
+    color: var(--lime);
+}
+
+/* Hide default Owl Carousel navigation */
+#our-games .owl-nav {
+    display: none !important;
+}
+
+/* ==================== GAME CARDS ==================== */
+.game-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.game-image img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    display: block;
+    transition: all 0.3s;
+}
+
+/* Image zoom and darken on hover */
+.game-card:hover img {
+    transform: scale(1.05);
+    filter: brightness(0.85);
+}
+
+/* Game category tags */
+.game-tags {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 8px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.game-tags .tag {
+    background: #24272fc5;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Game title overlay */
+.game-title {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    font-weight: 700;
+    color: #000;
+    padding: 6px 12px;
+    font-size: 1.125rem;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.2s ease;
+    z-index: 3;
+}
+
+/* Show tags and title on hover */
+.game-card:hover .game-tags,
+.game-card:hover .game-title {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Gradient overlay effect on hover */
+.game-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: 2px solid var(--lime);
+    background: linear-gradient(to top, rgba(203, 254, 28, 0.8) 0%, rgba(203, 254, 28, 0.4) 10%, rgba(203, 254, 28, 0) 70%);
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    border-radius: 16px;
+}
+
+.game-card:hover::before {
+    opacity: 1;
+}
+
+/* ==================== WHAT WE DO SECTION ==================== */
+#what-we-do h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+#what-we-do span {
+    color: var(--lime);
+}
+
+/* Service cards */
+#what-we-do .card {
+    background-color: var(--card-bg);
+    padding: 80px 60px;
+    text-align: center;
+    border-radius: 20px;
+    position: relative;
+    transition: all 0.3s;
+    border: 1.6px solid transparent; /* Transparent border to prevent layout shift */
+}
+
+/* Image showcase cards */
+#what-we-do .image-card {
+    background-color: transparent;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+#what-we-do .image-card img {
+    border-radius: 20px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Corner decoration elements (appear on hover) */
+#what-we-do .card::before,
+#what-we-do .card::after {
+    content: '';
+    width: 100px;
+    height: 100px;
+    background-color: var(--lime);
+    position: absolute;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+/* Top-left corner decoration */
+#what-we-do .card::before {
+    clip-path: polygon(25% 0, 0 0, 0 25%);
+    top: 0px;
+    left: 0px;
+}
+
+/* Bottom-right corner decoration */
+#what-we-do .card::after {
+    clip-path: polygon(100% 100%, 75% 100%, 100% 75%);
+    bottom: 0px;
+    right: 0px;
+}
+
+/* Icon container */
+#what-we-do .icon-box {
+    background-color: var(--icon-box-bg);
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 16px;
+    transition: all 0.3s;
+}
+
+#what-we-do .icon-box i {
+    color: var(--lime);
+    font-size: 28px;
+    transition: all 0.3s;
+}
+
+/* Service card titles */
+#what-we-do h4 {
+    font-family: "Days One", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* ==================== CARD HOVER EFFECTS ==================== */
+/* Animate corner decorations on hover */
+#what-we-do .card:hover::before {
+    opacity: 1;
+    top: 20px;
+    left: 20px;
+}
+
+#what-we-do .card:hover::after {
+    opacity: 1;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* Add lime border on hover */
+#what-we-do .card:hover {
+    border-color: var(--lime); /* Only change color, not add new border */
+}
+
+/* Invert icon box colors on hover */
+#what-we-do .card:hover .icon-box {
+    background-color: var(--lime);
+}
+
+#what-we-do .card:hover i {
+    color: #000;
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+/* Tablet devices (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .game-card,
+    .game-image,
+    .game-image img {
+        height: 400px !important;
+    }
+}
+
+/* Mobile devices (up to 767px) */
+@media (max-width: 767px) {
+    .game-card,
+    .game-image,
+    .game-image img {
+        height: 600px !important;
+    }
+
+    #what-we-do .card {
+        padding: 40px 30px;
+    }
+}
+
+/* Small mobile devices (up to 640px) */
+@media (max-width: 640px) {
+    .controls-wrapper {
+        gap: 20px !important;
+    }
+
+    .arrow-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 16px;
+    }
+
+    .btn-view {
+        width: 100%;
+        font-size: .875rem !important;
+        font-weight: 500 !important;
+        padding-block: 10px !important;
+        padding-inline: 24px !important;
+        margin-inline: 10px;
+    }
+}
+
+/* Desktop to tablet transition (up to 992px) */
 @media (max-width: 992px) {
-    .row { flex-direction: column-reverse; text-align: center; }
-    .header-caption, .header-img { padding: 0 !important; }
-    .header-caption { margin-bottom: 3rem; }
-    .header-img { justify-content: center; margin-bottom: 3rem; }
-    .hero-img-container { width: 80%; max-width: 400px; margin: 0 auto; }
-    .btn-style { justify-content: center; }
-    .hero-badge { left: 50% !important; transform: translateX(-50%); bottom: -15px; padding: 15px 10px; }
+    .header-caption,
+    .header-img {
+        padding: 0 !important;
+    }
+
+    .header-caption {
+        margin-bottom: 3rem;
+    }
+
+    .header-img {
+        justify-content: center;
+        margin-bottom: 3rem;
+    }
+
+    .hero-img-container {
+        width: 80%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .btn-style {
+        justify-content: center;
+    }
+
+    /* Center badge on mobile */
+    .hero-badge {
+        left: 50% !important;
+        transform: translateX(-50%);
+        bottom: -15px;
+        padding: 15px 10px;
+    }
 }
 
+/* Extra small devices (up to 576px) */
 @media (max-width: 576px) {
-    .header-caption h1 { font-size: 2.8rem !important; }
-    .header-caption p { font-size: 0.95rem !important; }
-    .btn-style .btn { width: 100%; max-width: 280px; margin: 0 auto; }
-    .hero-img-container { width: 90%; height: 300px; }
-    .hero-badge { padding: 12px 8px; }
-    .caption-title { font-size: 0.7rem; }
-    .caption-number { font-size: 1.1rem !important; }
+    .header-caption h1 {
+        font-size: 2.8rem !important;
+    }
+
+    .header-caption p {
+        font-size: 0.95rem !important;
+    }
+
+    .btn-style .btn {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .hero-img-container {
+        width: 90%;
+        height: 300px;
+    }
+
+    .hero-badge {
+        padding: 12px 8px;
+    }
+
+    .caption-title {
+        font-size: 0.7rem;
+    }
+
+    .caption-number {
+        font-size: 1.1rem !important;
+    }
+
+    #what-we-do .card {
+        padding: 30px 20px;
+    }
 }
-
-

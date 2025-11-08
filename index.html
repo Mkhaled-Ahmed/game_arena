@@ -4,63 +4,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Games website</title>
+    <title>GameArena - Ultimate Gaming Experience</title>
     <link rel="icon" href="images/favicon.png">
+    
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Days+One&display=swap"
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Days+One&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Owl Carousel Styles -->
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
+
+    <!-- Bootstrap & Custom Styles -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <!-- ==================== NAVBAR ==================== -->
+    <!-- ==================== NAVIGATION BAR ==================== -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top my-nav">
-        <div class="container-xxl container-fluid px-4 py-2">
-            <!-- Brand -->
+        <div class="container-xxl container-fluid px-xxl-5 px-4 py-2">
+            
+            <!-- Logo and Brand Name -->
             <div class="d-flex align-items-center">
                 <i class="fa-solid fa-gamepad me-3 text-lime game-icon"></i>
                 <span class="navbar-brand">GameArena</span>
             </div>
 
-            <!-- Toggler -->
+            <!-- Mobile Menu Toggle Button -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Nav Content -->
+            <!-- Collapsible Navigation Content -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <!-- Left Nav -->
+                
+                <!-- Main Navigation Links -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-uppercase" href="#">our games</a></li>
-                    <li class="nav-item"><a class="nav-link text-capitalize" href="#">what we do</a></li>
-                    <li class="nav-item"><a class="nav-link text-capitalize" href="#">our team</a></li>
-                    <li class="nav-item"><a class="nav-link text-capitalize" href="#">contact us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase" href="#our-games">Our Games</a></li>
+                    <li class="nav-item"><a class="nav-link text-capitalize" href="#what-we-do">What We Do</a></li>
+                    <li class="nav-item"><a class="nav-link text-capitalize" href="#our-team">Our Team</a></li>
+                    <li class="nav-item"><a class="nav-link text-capitalize" href="#contact-us">Contact Us</a></li>
                 </ul>
 
-                <!-- Desktop Icons + Sign In -->
+                <!-- Desktop Action Icons and Sign In Button -->
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-none d-lg-flex align-items-center">
                     <li class="nav-item"><i class="fa-regular fa-bell me-3 icon" aria-label="Notifications"></i></li>
                     <li class="nav-item"><i class="fa-regular fa-message me-3 icon" aria-label="Messages"></i></li>
-                    <li class="nav-item"><button class="btn btn-lime text-dark fw-bold px-4 text-capitalize">sign
-                            in</button></li>
+                    <li class="nav-item">
+                        <button class="btn btn-lime text-dark fw-bold px-4 text-capitalize">Sign In</button>
+                    </li>
                 </ul>
 
-                <!-- Mobile Menu -->
+                <!-- Mobile Menu Actions -->
                 <div class="d-lg-none mobile-menu mt-3 px-3">
                     <hr class="text-secondary">
-                    <button class="btn btn-outline-light w-100 text-start mb-2"><i class="fa-regular fa-bell me-2"></i>
-                        Notifications</button>
-                    <button class="btn btn-outline-light w-100 text-start mb-3"><i
-                            class="fa-regular fa-message me-2"></i> Messages</button>
+                    <button class="btn btn-outline-light w-100 text-start mb-2">
+                        <i class="fa-regular fa-bell me-2"></i>Notifications
+                    </button>
+                    <button class="btn btn-outline-light w-100 text-start mb-3">
+                        <i class="fa-regular fa-message me-2"></i>Messages
+                    </button>
                     <button class="btn btn-lime text-dark fw-bold w-100 py-2 text-capitalize">Sign In</button>
                 </div>
             </div>
@@ -70,28 +83,30 @@
     <!-- ==================== HERO SECTION ==================== -->
     <header id="home">
         <div class="container-xxl container-fluid px-xxl-5 px-0">
-            <!-- استخدمنا flex-column-reverse عشان النص يطلع فوق على الموبايل -->
-            <div class="row align-items-center g-3 flex-lg-row flex-column">
+            <div class="row align-items-center g-3 flex-lg-row flex-column py-xxl-0 py-5">
 
-                <!-- Caption - هيبقى الأول على الموبايل -->
+                <!-- Hero Text Content -->
                 <div class="col-lg-6 header-caption text-center text-lg-start">
                     <h1>THE ULTIMATE <span>GAMING</span> EXPERIENCE</h1>
-                    <p>Join millions of gamers worldwide in the most competitive eSports <br class="d-none d-md-block">
-                        tournaments. Experience next-level gaming with cutting-edge technology and<br
-                            class="d-none d-md-block"> endless possibilities.</p>
-                    <div
-                        class="btn-style d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
-                        <button class="btn btn-lime text-dark fw-bold py-3 px-4 text-capitalize">start gaming
-                            now</button>
-                        <button class="btn btn-lime btn-dark text-dark fw-bold py-3 px-4 text-capitalize">watch
-                            tournaments</button>
+                    <p>
+                        Join millions of gamers worldwide in the most competitive eSports <br class="d-none d-md-block">
+                        tournaments. Experience next-level gaming with cutting-edge technology and<br class="d-none d-md-block">
+                        endless possibilities.
+                    </p>
+                    
+                    <!-- Call to Action Buttons -->
+                    <div class="btn-style d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+                        <button class="btn btn-lime text-dark fw-bold py-3 px-4 text-capitalize">Start Gaming Now</button>
+                        <button class="btn btn-lime btn-dark text-dark fw-bold py-3 px-4 text-capitalize">Watch Tournaments</button>
                     </div>
                 </div>
 
-                <!-- Hero Image + Badge -->
+                <!-- Hero Image with Statistics Badge -->
                 <div class="col-lg-6 header-img d-flex justify-content-center justify-content-lg-end">
                     <div class="hero-img-container">
                         <div class="hero-img"></div>
+                        
+                        <!-- Active Players Badge -->
                         <div class="hero-badge">
                             <div class="badge-icon"><i class="fa-solid fa-trophy"></i></div>
                             <div class="badge-caption">
@@ -105,12 +120,341 @@
         </div>
     </header>
 
+    <!-- ==================== MAIN CONTENT ==================== -->
+    <main>
+        
+        <!-- ==================== OUR GAMES SECTION ==================== -->
+        <section id="our-games" class="py-xxl-5 py-4">
+            <div class="container-xxl container-fluid px-xxl-5 px-0 py-5 text-center">
+                
+                <!-- Section Header -->
+                <p class="text-uppercase text-lime fw-bold mb-3">Our Games</p>
+                <h2 class="text-capitalize fw-bold mb-5 text-white">Our Latest Games</h2>
 
+                <!-- Games Carousel -->
+                <div class="owl-carousel owl-theme px-xxl-0 px-3">
 
+                    <!-- Game Card 1: Alien Companions -->
+                    <div class="item game-card">
+                        <div class="game-image">
+                            <img src="images/latest-games-1.png" alt="Alien Companions">
+                            <div class="game-tags">
+                                <span class="tag"><i class="fa-solid fa-gamepad text-lime me-1"></i>ADVENTURE</span>
+                                <span class="tag"><i class="fa-solid fa-users text-lime me-1"></i>MULTIPLAYER</span>
+                            </div>
+                            <div class="game-title">Alien Companions</div>
+                        </div>
+                    </div>
 
+                    <!-- Game Card 2: Cyber Run 2099 -->
+                    <div class="item game-card">
+                        <div class="game-image">
+                            <img src="images/latest-games-2.png" alt="Cyber Run 2099">
+                            <div class="game-tags">
+                                <span class="tag"><i class="fa-solid fa-flag-checkered text-lime me-1"></i>RACING</span>
+                                <span class="tag"><i class="fa-solid fa-bolt text-lime me-1"></i>SCI-FI</span>
+                            </div>
+                            <div class="game-title">Cyber Run 2099</div>
+                        </div>
+                    </div>
 
+                    <!-- Game Card 3: The Legend of Zelda -->
+                    <div class="item game-card">
+                        <div class="game-image">
+                            <img src="images/latest-games-3.png" alt="The Legend of Zelda: Tears of the Kingdom">
+                            <div class="game-tags">
+                                <span class="tag"><i class="fa-brands fa-discord text-lime me-1"></i>ACTION</span>
+                                <span class="tag"><i class="fa-solid fa-microchip text-lime me-1"></i>GEFORCE</span>
+                            </div>
+                            <div class="game-title">The Legend of Zelda: Tears of the Kingdom</div>
+                        </div>
+                    </div>
+
+                    <!-- Game Card 4: Aetheria Chronicles -->
+                    <div class="item game-card">
+                        <div class="game-image">
+                            <img src="images/latest-games-4.png" alt="Aetheria Chronicles">
+                            <div class="game-tags">
+                                <span class="tag"><i class="fa-solid fa-shield-halved text-lime me-1"></i>RPG</span>
+                                <span class="tag"><i class="fa-solid fa-wand-magic-sparkles text-lime me-1"></i>FANTASY</span>
+                            </div>
+                            <div class="game-title">Aetheria Chronicles</div>
+                        </div>
+                    </div>
+
+                    <!-- Game Card 5: Warfront Protocol -->
+                    <div class="item game-card">
+                        <div class="game-image">
+                            <img src="images/latest-games-5.png" alt="Warfront Protocol">
+                            <div class="game-tags">
+                                <span class="tag"><i class="fa-solid fa-crosshairs text-lime me-1"></i>SHOOTER</span>
+                                <span class="tag"><i class="fa-solid fa-user-friends text-lime me-1"></i>CO-OP</span>
+                            </div>
+                            <div class="game-title">Warfront Protocol</div>
+                        </div>
+                    </div>
+
+                    <!-- Game Card 6: Shot Striker -->
+                    <div class="item game-card">
+                        <div class="game-image">
+                            <img src="images/latest-games-6.png" alt="Shot Striker">
+                            <div class="game-tags">
+                                <span class="tag"><i class="fa-solid fa-dragon text-lime me-1"></i>FOOTBALL</span>
+                                <span class="tag"><i class="fa-solid fa-star text-lime me-1"></i>FANTASY</span>
+                            </div>
+                            <div class="game-title">Shot Striker</div>
+                        </div>
+                    </div>
+
+                    <!-- Game Card 7: Epic Gaming League -->
+                    <div class="item game-card">
+                        <div class="game-image">
+                            <img src="images/latest-games-7.png" alt="Epic Gaming League">
+                            <div class="game-tags">
+                                <span class="tag"><i class="fa-solid fa-trophy text-lime me-1"></i>SPORTS</span>
+                                <span class="tag"><i class="fa-solid fa-fire text-lime me-1"></i>LEAGUE</span>
+                            </div>
+                            <div class="game-title">Epic Gaming League</div>
+                        </div>
+                    </div>
+
+                    <!-- Game Card 8: Barren Alien Worlds -->
+                    <div class="item game-card">
+                        <div class="game-image">
+                            <img src="images/latest-games-8.png" alt="Barren Alien Worlds">
+                            <div class="game-tags">
+                                <span class="tag"><i class="fa-solid fa-rocket text-lime me-1"></i>SPACE</span>
+                                <span class="tag"><i class="fa-solid fa-globe text-lime me-1"></i>EXPLORATION</span>
+                            </div>
+                            <div class="game-title">Barren Alien Worlds</div>
+                        </div>
+                    </div>
+
+                    <!-- Game Card 9: Cloveland Quest -->
+                    <div class="item game-card">
+                        <div class="game-image">
+                            <img src="images/latest-games-9.png" alt="Cloveland Quest">
+                            <div class="game-tags">
+                                <span class="tag"><i class="fa-solid fa-hat-wizard text-lime me-1"></i>ACTION</span>
+                                <span class="tag"><i class="fa-solid fa-dungeon text-lime me-1"></i>FUTURISTIC</span>
+                            </div>
+                            <div class="game-title">Cloveland Quest</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Carousel Navigation Controls -->
+                <div class="controls-wrapper d-flex flex-wrap justify-content-center align-items-center gap-4 mt-5">
+                    <button class="arrow-btn" id="prevBtn" aria-label="Previous games">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <button class="arrow-btn" id="nextBtn" aria-label="Next games">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                    <button class="btn btn-lime btn-dark text-dark text-capitalize btn-view">View All Games</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== WHAT WE DO SECTION ==================== -->
+        <section id="what-we-do" class="py-xxl-5 py-4">
+            <div class="container-xxl container-fluid px-xxl-5 px-0 py-5 text-center">
+                
+                <!-- Section Header -->
+                <div class="what-we-do-caption mb-5">
+                    <p class="text-uppercase text-lime fw-bold mb-3">What We Do</p>
+                    <h2 class="text-capitalize fw-bold mb-0 text-white">More Than Just Games</h2>
+                    <h3>We Build <span>Interactive</span> Journeys</h3>
+                </div>
+
+                <!-- Services Grid -->
+                <div class="row g-4 px-xxl-0 px-4">
+                    
+                    <!-- Service Card: PC Game Development -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card d-flex flex-column align-items-center justify-content-center w-100 h-100">
+                            <div class="icon-box d-flex flex-column align-items-center justify-content-center">
+                                <i class="fa-solid fa-desktop"></i>
+                            </div>
+                            <h4>PC Game Development</h4>
+                        </div>
+                    </div>
+
+                    <!-- Service Card: Mobile Game Development -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card d-flex flex-column align-items-center justify-content-center w-100 h-100">
+                            <div class="icon-box d-flex flex-column align-items-center justify-content-center">
+                                <i class="fa-solid fa-mobile-screen"></i>
+                            </div>
+                            <h4>Mobile Game Development</h4>
+                        </div>
+                    </div>
+
+                    <!-- Showcase Image Card 1 -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="image-card w-100 h-100">
+                            <img src="images/what-we-do-1.png" alt="Game Controller"
+                                class="w-100 h-100 object-fit-cover rounded-3">
+                        </div>
+                    </div>
+
+                    <!-- Service Card: AR/VR Solutions -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card d-flex flex-column align-items-center justify-content-center w-100 h-100">
+                            <div class="icon-box d-flex flex-column align-items-center justify-content-center">
+                                <i class="fa-solid fa-vr-cardboard"></i>
+                            </div>
+                            <h4>AR/VR Solutions</h4>
+                        </div>
+                    </div>
+
+                    <!-- Service Card: AR/VR Design -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card d-flex flex-column align-items-center justify-content-center w-100 h-100">
+                            <div class="icon-box d-flex flex-column align-items-center justify-content-center">
+                                <i class="fa-solid fa-cubes"></i>
+                            </div>
+                            <h4>AR/VR Design</h4>
+                        </div>
+                    </div>
+
+                    <!-- Showcase Image Card 2 -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="image-card w-100 h-100">
+                            <img src="images/what-we-do-2.png" alt="Character Design"
+                                class="w-100 h-100 object-fit-cover rounded-3">
+                        </div>
+                    </div>
+
+                    <!-- Service Card: PS4 Game Development -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card d-flex flex-column align-items-center justify-content-center w-100 h-100">
+                            <div class="icon-box d-flex flex-column align-items-center justify-content-center">
+                                <i class="fa-brands fa-playstation"></i>
+                            </div>
+                            <h4>PS4 Game Development</h4>
+                        </div>
+                    </div>
+
+                    <!-- Service Card: 3D Modeling -->
+                    <div class="col-6 col-md-4 col-lg-3">
+                        <div class="card d-flex flex-column align-items-center justify-content-center w-100 h-100">
+                            <div class="icon-box d-flex flex-column align-items-center justify-content-center">
+                                <i class="fa-solid fa-cube"></i>
+                            </div>
+                            <h4>3D Modeling</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== PLACEHOLDER SECTIONS ==================== -->
+        <section id="our-team"></section>
+        <section id="contact-us"></section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer></footer>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <!-- jQuery (required for Owl Carousel) -->
+    <script src="js/jquery.min.js"></script>
     
-    <script src="js/bootstrap.bundle.min.js" defer></script>
+    <!-- Owl Carousel Plugin -->
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    
+    <!-- Bootstrap Bundle (includes Popper) -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Owl Carousel Initialization and Controls -->
+    <script>
+        $(document).ready(function () {
+            // Initialize Owl Carousel
+            var owl = $(".owl-carousel");
+
+            owl.owlCarousel({
+                loop: false,              // Disable infinite loop
+                margin: 25,               // Space between items
+                nav: false,               // Hide default navigation
+                dots: false,              // Hide pagination dots
+                autoplay: false,          // Disable autoplay
+                slideBy: 3,               // Number of items to slide
+                smartSpeed: 400,          // Animation speed in milliseconds
+                responsive: {
+                    // Mobile: 1 item per view
+                    0: { 
+                        items: 1, 
+                        slideBy: 1 
+                    },
+                    // Tablet: 2 items per view
+                    768: { 
+                        items: 2, 
+                        slideBy: 2 
+                    },
+                    // Desktop: 3 items per view
+                    1024: { 
+                        items: 3, 
+                        slideBy: 3 
+                    }
+                }
+            });
+
+            // Next Button Handler
+            $('#nextBtn').click(function () {
+                var currentIndex = owl.find('.owl-item.active').last().index();
+                var totalItems = owl.find('.owl-item').length;
+                var visibleItems = owl.data('owl.carousel').options.items;
+
+                // If at the end, loop back to start
+                if (currentIndex >= totalItems - visibleItems) {
+                    owl.trigger('to.owl.carousel', [0, 300]);
+                } else {
+                    owl.trigger('next.owl.carousel');
+                }
+            });
+
+            // Previous Button Handler
+            $('#prevBtn').click(function () {
+                var currentIndex = owl.find('.owl-item.active').first().index();
+
+                // If at the start, loop to end
+                if (currentIndex === 0) {
+                    var totalItems = owl.find('.owl-item').length;
+                    var visibleItems = owl.data('owl.carousel').options.items;
+                    var lastStart = totalItems - visibleItems;
+                    owl.trigger('to.owl.carousel', [lastStart, 300]);
+                } else {
+                    owl.trigger('prev.owl.carousel');
+                }
+            });
+
+            // Smooth scroll for navigation links
+            $('.nav-link').on('click', function(e) {
+                var target = $(this).attr('href');
+                
+                // Check if it's an anchor link (starts with #)
+                if (target && target.startsWith('#')) {
+                    e.preventDefault();
+                    
+                    var targetSection = $(target);
+                    if (targetSection.length) {
+                        var offset = 20; // Offset for fixed navbar height
+                        var scrollPosition = targetSection.offset().top - offset;
+                        
+                        $('html, body').animate({
+                            scrollTop: scrollPosition
+                        }, 800); // 800ms smooth animation
+                        
+                        // Close mobile menu if open
+                        $('.navbar-collapse').collapse('hide');
+                    }
+                }
+            });
+        });
+    </script>
+
 </body>
 
 </html>
