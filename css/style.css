@@ -447,7 +447,8 @@ main h2 {
     border-radius: 20px;
     position: relative;
     transition: all 0.3s;
-    border: 1.6px solid transparent; /* Transparent border to prevent layout shift */
+    border: 1.6px solid transparent;
+    /* Transparent border to prevent layout shift */
 }
 
 /* Image showcase cards */
@@ -530,7 +531,8 @@ main h2 {
 
 /* Add lime border on hover */
 #what-we-do .card:hover {
-    border-color: var(--lime); /* Only change color, not add new border */
+    border-color: var(--lime);
+    /* Only change color, not add new border */
 }
 
 /* Invert icon box colors on hover */
@@ -542,9 +544,99 @@ main h2 {
     color: #000;
 }
 
+.scroller-bg {
+    margin-top: 1rem;
+    position: relative;
+    background: radial-gradient(oklab(0.928211 -0.123005 0.187222 / 0.85) 0%, rgba(0, 0, 0, 0) 70%);
+    height: 350px;
+}
+
+.scroller-bg::before {
+    content: "";
+    background: linear-gradient(90deg, transparent, var(--lime) 20%, var(--lime) 80%, transparent);
+    width: 80%;
+    max-width: 600px;
+    height: 2px;
+    box-shadow: 0 0 10px var(--lime), 0 0 20px #cbfe1c4d;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translate(-50%);
+
+}
+
+/* -------------------------------------------------
+    Scroller base
+   ------------------------------------------------- */
+.scroller {
+    max-width: auto;
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg,
+            transparent,
+            white 15%,
+            white 85%,
+            transparent);
+    mask: linear-gradient(90deg,
+            transparent,
+            white 15%,
+            white 85%,
+            transparent);
+
+    transform: translateY(50%);
+
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+    padding-block: 0.5rem;
+    display: flex;
+    gap: 1rem;
+    width: max-content;
+    animation: scroll var(--duration, 60s) linear infinite;
+    animation-direction: var(--dir, normal);
+}
+
+/* direction helpers */
+.scroller[data-direction="right"] {
+    --dir: reverse;
+}
+
+.scroller[data-direction="left"] {
+    --dir: normal;
+}
+
+/* speed helpers */
+.scroller[data-speed="slow"] {
+    --duration: 50s;
+}
+
+.scroller[data-speed="fast"] {
+    --duration: 30s;
+}
+
+/* -------------------------------------------------
+    Logo items
+   ------------------------------------------------- */
+.scroller__inner img {
+    width: 100px;
+    height: auto;
+    border-radius: 18px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* -------------------------------------------------
+    Animation
+   ------------------------------------------------- */
+@keyframes scroll {
+    to {
+        transform: translateX(calc(-50% - 0.5rem));
+    }
+}
+
 /* ==================== RESPONSIVE DESIGN ==================== */
 /* Tablet devices (768px - 1024px) */
 @media (max-width: 1024px) and (min-width: 768px) {
+
     .game-card,
     .game-image,
     .game-image img {
@@ -554,6 +646,7 @@ main h2 {
 
 /* Mobile devices (up to 767px) */
 @media (max-width: 767px) {
+
     .game-card,
     .game-image,
     .game-image img {
@@ -589,6 +682,7 @@ main h2 {
 
 /* Desktop to tablet transition (up to 992px) */
 @media (max-width: 992px) {
+
     .header-caption,
     .header-img {
         padding: 0 !important;
