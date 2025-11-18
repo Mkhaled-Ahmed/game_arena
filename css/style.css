@@ -624,6 +624,445 @@ main h2 {
     flex-shrink: 0;
 }
 
+
+/* Our-Team-Section */
+.our-team-caption span {
+    color: oklch(0.707 0.022 261.325);
+}
+
+.custom-gutter-32 {
+    --bs-gutter-x: 32px;
+    --bs-gutter-y: 32px;
+}
+
+.player-card {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #0c0c0c;
+    transition: transform 0.35s ease;
+    width: fit-content;
+}
+
+/* Image wrapper */
+.player-image {
+    position: relative;
+    overflow: hidden;
+}
+
+/* MAIN IMAGE */
+.player-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
+}
+
+.backdrop-layer {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: grayscale(100%) brightness(90%);
+    z-index: 3;
+    transition: transform 0.7s ease;
+    transform: translateY(0);
+}
+
+.player-card:hover .backdrop-layer {
+    transform: translateY(-100%);
+}
+
+.player-info,
+.game-logo {
+    position: absolute;
+    z-index: 2;
+}
+
+.player-info {
+    bottom: 25px;
+    left: 25px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: left;
+    width: 73%;
+}
+
+.player-name {
+    font-family: "Days One", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    color: #fff;
+}
+
+.player-role {
+    font-size: .875rem;
+    color: var(--lime);
+    line-height: 1;
+    margin-top: 8px;
+    line-height: 1;
+}
+
+.player-title {
+    font-size: .75rem;
+    color: oklch(0.707 0.022 261.325);
+}
+
+/* GAME LOGO on right */
+.game-logo {
+    right: 25px;
+    bottom: 25px;
+    writing-mode: vertical-rl;
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--lime);
+}
+
+
+
+/* Contact-Us Section */
+#contact-us {
+    background-image: linear-gradient(to right bottom, oklch(0.21 0.034 264.665) 0%, rgb(11, 14, 19) 100%);
+}
+
+.social-contact {
+    margin-bottom: 32px;
+}
+
+.location-contact {
+    background-color: #1E2939;
+    border-radius: 16px;
+    padding: 32px;
+}
+
+.location-contact .contact-icon {
+    margin-right: 24px;
+    width: 64px;
+    height: 64px;
+    background-color: var(--lime);
+}
+
+.contact-icon i {
+    color: #000;
+    font-size: 1.5rem;
+    margin: auto auto;
+}
+
+.location-contact span {
+    font-family: "Days One", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color:
+        rgb(241, 241, 241);
+    line-height: 28px;
+}
+
+.location-contact h4 {
+    font-size: 16px;
+    font-weight: 400;
+    color: oklch(0.707 0.022 261.325);
+}
+
+.community-contact {
+    background-image: linear-gradient(to right, rgb(203, 254, 28) 0%, oklch(0.792 0.209 151.711) 100%);
+    border-radius: 16px;
+    padding: 32px;
+}
+
+.community-contact h3 {
+    font-family: "Days One", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color:
+        rgb(11, 14, 19);
+}
+
+.community-contact h4 {
+    font-size: 16px;
+    font-weight: 400;
+    color:
+        rgb(11, 14, 19);
+}
+
+.community-contact .icon {
+    width: 48px;
+    height: 48px;
+    background-color: rgb(11, 14, 19);
+    ;
+}
+
+.community-contact .icon i {
+    font-size: 1.25rem;
+    color: var(--lime);
+}
+
+.community-contact .icon:hover {
+    background-color: oklab(0.162889 -0.00189449 -0.0115197 / 0.8);
+}
+
+.contact-card {
+    background-color: #1E2939;
+    border-radius: 16px;
+    padding: 32px;
+    width: 100%;
+}
+
+.contact-title {
+    font-family: "Days One", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 24px;
+}
+
+.form-label {
+    font-size: .875rem !important;
+    font-weight: 700 !important;
+    color: oklch(0.872 0.01 258.338);
+    margin-bottom: 8px;
+}
+
+.form-control,
+.form-select {
+    background-color: #364153;
+    border: 0.8px solid oklch(0.446 0.03 256.802);
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+.form-control {
+    color: #8D939C;
+}
+
+.form-select {
+    color:
+        rgb(241, 241, 241);
+}
+
+.form-control:focus,
+.form-select:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 2px solid var(--lime);
+    background-color: #364153;
+    color: #fff;
+}
+
+.form-control::placeholder {
+    color: #9297A0;
+}
+
+textarea.form-control {
+    min-height: 145.6px;
+    resize: vertical;
+}
+
+.form-check {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 12px;
+}
+
+.form-check-input {
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    width: 20px;
+    height: 20px;
+    outline: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    color: var(--lime);
+}
+
+.form-check-input:checked {
+    border-color: var(--lime);
+}
+
+.form-check-label {
+    color: #8b9db0;
+    font-size: .875rem;
+    font-weight: 400;
+}
+
+.btn-submit {
+    background-color: var(--lime);
+    color: #0f1825;
+    border: none;
+    border-radius: 8px;
+    padding: 16px 24px;
+    font-size: 1.125rem;
+    font-weight: 700;
+    width: 100%;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+
+.stats-row {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    color: var(--lime);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.stat-label {
+    color: oklch(0.707 0.022 261.325);
+    font-size: .875rem;
+}
+
+.send-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+
+
+/* Footer Section */
+.footer {
+    padding-block: 64px;
+    background: #000000;
+    color: #8b9db0;
+}
+
+.footer-top {
+    padding-bottom: 48px;
+    border-bottom: 1px solid #1a1a1a;
+    margin-bottom: 32px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.brand-name {
+    color: var(--lime);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.footer-description {
+    color:
+        oklch(0.707 0.022 261.325);
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 350px;
+    margin-bottom: 24px;
+}
+
+.social-links {
+    display: flex;
+    gap: 16px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: oklch(0.707 0.022 261.325);
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.social-link:hover {
+    color: var(--lime);
+}
+
+.footer-title {
+    font-family: "Days One", sans-serif;
+    color: rgb(241, 241, 241);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: oklch(0.707 0.022 261.325);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--lime);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* gap: 20px; */
+}
+
+.copyright {
+    color: 
+oklch(0.707 0.022 261.325);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.legal-links {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.legal-links a {
+    color: #8b9db0;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.legal-links a:hover {
+    color: var(--lime);
+}
+
+@media (max-width: 768px) {
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
 /* -------------------------------------------------
     Animation
    ------------------------------------------------- */
