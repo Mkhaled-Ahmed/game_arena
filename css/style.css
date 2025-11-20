@@ -13,8 +13,8 @@
 * {
     font-family: "Chakra Petch", sans-serif;
     box-sizing: border-box;
-}
 
+}
 
 /* ==================== NAVIGATION BAR ==================== */
 .my-nav {
@@ -34,6 +34,13 @@
     font-weight: 700;
     color: var(--lime);
     cursor: default;
+}
+
+/* Keep brand color constant (do not turn white on hover/focus/active) */
+.navbar-brand:hover,
+.navbar-brand:focus,
+.navbar-brand:active {
+    color: var(--lime) !important;
 }
 
 .game-icon {
@@ -569,7 +576,7 @@ main h2 {
     Scroller base
    ------------------------------------------------- */
 .scroller {
-    max-width: auto;
+    max-width: none;
     overflow: hidden;
     -webkit-mask: linear-gradient(90deg,
             transparent,
@@ -755,9 +762,9 @@ main h2 {
     font-family: "Days One", sans-serif;
     font-size: 1.25rem;
     font-weight: 700;
-    color:
-        rgb(241, 241, 241);
+    color: rgb(241, 241, 241);
     line-height: 28px;
+
 }
 
 .location-contact h4 {
@@ -776,22 +783,19 @@ main h2 {
     font-family: "Days One", sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
-    color:
-        rgb(11, 14, 19);
+    color: rgb(11, 14, 19);
 }
 
 .community-contact h4 {
     font-size: 16px;
     font-weight: 400;
-    color:
-        rgb(11, 14, 19);
+    color: rgb(11, 14, 19);
 }
 
 .community-contact .icon {
     width: 48px;
     height: 48px;
     background-color: rgb(11, 14, 19);
-    ;
 }
 
 .community-contact .icon i {
@@ -966,9 +970,8 @@ textarea.form-control {
     margin: 0;
 }
 
-.footer-description {
-    color:
-        oklch(0.707 0.022 261.325);
+.footer-description .footer-description {
+    color: oklch(0.707 0.022 261.325);
     font-size: 1rem;
     line-height: 1.6;
     max-width: 350px;
@@ -1032,8 +1035,8 @@ textarea.form-control {
 }
 
 .copyright {
-    color: 
-oklch(0.707 0.022 261.325);
+    color:
+        oklch(0.707 0.022 261.325);
     font-size: 1rem;
     font-weight: 400;
 }
@@ -1160,6 +1163,7 @@ oklch(0.707 0.022 261.325);
     .header-caption h1 {
         font-size: 2.8rem !important;
     }
+
 
     .header-caption p {
         font-size: 0.95rem !important;
